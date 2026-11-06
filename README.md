@@ -39,6 +39,16 @@ U30 Pro（MU5358 / UMS9632）与 U30 Air 同属 MyOS goform 家族，但基带�
 
 ---
 
+## 下载安装
+
+预编译 APK 见 [GitHub Releases](https://github.com/zhiquanchi/u30pro-panel/releases)。
+
+- `app-release.apk`，Android 8.0+，侧载安装。
+- 该包使用独立的 release keystore 签名（keystore 不入库）。如果你之前用 `adb install` 装过 debug 包，**覆盖安装会报签名冲突**：需要先卸载 debug 版（会清除已保存的密码/设备档案），或在另一台手机安装。
+- 自己构建：`./gradlew assembleRelease`。仓库不含签名密钥，未配置 `keystore.properties` 时产出的是 unsigned APK。
+
+---
+
 ## 功能
 
 - **状态总览**：NR/ENDC/LTE、运营商、RSRP/SINR/RSRQ、频段/PCI/小区、实时上下行 + 60 秒曲线、本月/本次流量、在线时长、WiFi 客户端数、电量、IMEI/ICCID/号码、温度（仅在设备真的返回时显示）。SINR/RSRQ/频段/PCI 从 `network_information` 的 `Nr_*` 字段读取。
