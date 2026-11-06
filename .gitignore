@@ -1,0 +1,13 @@
+*.iml
+.gradle/
+.zcode/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+docs/probe-u30pro.json
